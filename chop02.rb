@@ -19,9 +19,9 @@ class Chop
 	end
 
 	def range_overlap?
-		if startrange > @endrange
+		if @startrange > @endrange
 			print -1
-			return
+			abort
 		end
 	end
 
@@ -60,7 +60,6 @@ class Chop
 	end
 
 #Creates new instance of chop used unordered array
-Ian = Chop.new(12, [50,13,67,34,2,12,9,80])#Array(1..100))
-Ian.chop
-
+katachop = Chop.new(10, [50,13,67,34,2,12,9,80])#Array(1..100))
+katachop.chop
 end
